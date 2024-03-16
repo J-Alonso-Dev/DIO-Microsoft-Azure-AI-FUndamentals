@@ -9,3 +9,17 @@ Para isso, você deve acessar o Vision Studio em https://portal.vision.cognitive
 **Exemplo:**
 
 ![alt text](Output/output-camera-1.png)
+
+## Reconhecimento Óptico de Caracteres (OCR)
+
+ Através deste recurso conseguimos extrair o texto de imagens no Vision Studio.
+
+ Para realizar essa tarefa, é necessário acessar o Vision Studio em um navegador da web
+ 
+ Acesse o site "https://portal.vision.cognitive.azure.com".
+
+Na página inicial, selecione "Reconhecimento Óptico de Caracteres" e, em seguida, o mosaico "Extrair texto de imagens".
+
+Em seguida, você usará o Vision Studio para testar o OCR com diferentes tipos de imagens.
+
+![alt text](image.png)
