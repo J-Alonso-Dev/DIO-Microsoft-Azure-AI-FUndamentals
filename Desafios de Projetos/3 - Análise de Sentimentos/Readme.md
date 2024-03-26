@@ -10,16 +10,13 @@ Para realizar a análise, é necessário criar um recurso de Linguagem no Azure.
 
 Após configurar o recurso no Azure AI Language Studio, você pode analisar as avaliações de hotéis. Basta acessar o Language Studio em https://language.cognitive.azure.com, selecionar a opção para classificar o texto e analisar o sentimento das opiniões.
 
-![alt text](2024-03-19_00-26.png)
+![alt text](../../Imagens/2024-03-19_00-26.png)
 
 Após configurar o recurso no Azure AI Language Studio, você pode analisar as avaliações de hotéis. Basta acessar o Language Studio em https://language.cognitive.azure.com, selecionar a opção para classificar o texto e analisar o sentimento das opiniões. Você poderá colar avaliações de hotéis para analisar se são predominantemente positivas ou negativas, observando os resultados de sentimentos e níveis de confiança associados a cada avaliação.
 
-![alt text](2024-03-19_01-05.png)
-
-![alt text](2024-03-19_01-08.png)
-
-![alt text](2024-03-19_01-16.png)
-
-![alt text](2024-03-19_01-17.png)
+![alt text](../../Imagens/2024-03-19_01-05.png)
+![alt text](../../Imagens/2024-03-19_01-08.png)
+![alt text](../../Imagens/2024-03-19_01-16.png)
+![alt text](../../Imagens/2024-03-19_01-17.png)
 
 Esse exercício prático demonstra como utilizar o Azure AI Language para análise de texto e sentimentos em avaliações de hotéis, destacando a aplicação prática do processamento de linguagem natural na compreensão e classificação de textos.

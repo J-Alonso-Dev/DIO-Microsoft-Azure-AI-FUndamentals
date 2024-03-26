@@ -20,4 +20,4 @@ Acesse o site "https://portal.vision.cognitive.azure.com".
 Na página inicial, selecione "Reconhecimento Óptico de Caracteres" e, em seguida, o mosaico "Extrair texto de imagens".
 Em seguida, você usará o Vision Studio para testar o OCR com diferentes tipos de imagens.
 
-![alt text](image.png)
+![alt text](Output/image.png)]
