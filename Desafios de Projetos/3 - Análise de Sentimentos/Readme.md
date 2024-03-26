@@ -12,7 +12,7 @@ Após configurar o recurso no Azure AI Language Studio, você pode analisar as a
 
 ![alt text](../../Imagens/2024-03-19_00-26.png)
 
-Após configurar o recurso no Azure AI Language Studio, você pode analisar as avaliações de hotéis. Basta acessar o Language Studio em https://language.cognitive.azure.com, selecionar a opção para classificar o texto e analisar o sentimento das opiniões. Você poderá colar avaliações de hotéis para analisar se são predominantemente positivas ou negativas, observando os resultados de sentimentos e níveis de confiança associados a cada avaliação.
+ Você poderá colar avaliações de hotéis para analisar se são predominantemente positivas ou negativas, observando os resultados de sentimentos e níveis de confiança associados a cada avaliação.
 
 ![alt text](../../Imagens/2024-03-19_01-05.png)
 ![alt text](../../Imagens/2024-03-19_01-08.png)
