@@ -1,86 +1,54 @@
-<h1>
-    <a href="https://www.dio.me/">
-     <img align="center" width="60px" src="https://hermes.dio.me/lab_projects/badges/619af8f8-d138-4e40-9d48-fec7b318e44d.png"></a>
-    <span> 
-Azure Cognitive Search: Utilizando AI Search para indexação e consulta de Dados</span>
-</h1>
 
-## Problema:
+# Azure Cognitive Search: Aplicando AI Search para indexar e pesquisar dados
 
-O desafio propoe que seja criada uma pesquisa que funcione juntamente com um serviço de inteligência artificial para identificar palavras chave, sentimentos, utilizando também o serviço de armazenamento do azure.
+Desafio:
+O objetivo é desenvolver uma pesquisa que interaja com um serviço de inteligência artificial para identificar palavras-chave, emoções, e também utilizar o serviço de armazenamento do Azure.
 
-[Documentação](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/11-ai-search.html)
+### Etapa 1: Configurando o recurso do Azure AI Search:
 
-## Passo 1: Criando recurso do Asure AI Search:     
+Clique no botão + Criar um recurso , pesquise Azure AI Search e crie um recurso Azure AI Search 
 
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/01%20-%20config%20da%20busca.gif" width=""/> ...  
+![alt text](<../../Imagens/01 - config da busca.gif>)
 
-## Passo 2: Criando recurso do Azure AI services:      
+Após a conclusão da implantação, selecione Ir para o recurso
 
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/02%20-%20config%20do%20servi%C3%A7o%20de%20IA.gif" width=""/> ... 
+![alt text](<../../Imagens/02 - config do serviço de IA.gif>)
 
-## Passo 3: Criando o storage:      
+### Etapa 2: Configurando o armazenamento:
 
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/03%20-%20Cria%C3%A7%C3%A3o%20do%20storage.gif" width=""/> ... 
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/04%20-%20deploy%20completo.png" width=""/> ... 
+![alt text](<../../Imagens/03 - Criação do storage.gif>)
 
-## Passo 3: Permitindo acesso anônimo ao Blob:      
+Clique em Revisar e em Criar. Aguarde a conclusão da implantação e vá para o recurso implantado.
 
-Como nosso laboratório é apenas didático,para aprender os princípios da inteligência artificial com o Azure, precisamos permitir o acesso anônimo ao blob para simplificar e facilitar nossas implementações, Após criar o seu Storage, entre no mesmo e navegue até a guia SETTINGS > CONFIGURATION seguindo os passos abaixo:
+Altere a configuração de Permitir acesso anônimo de Blob para Habilitado e selecione Salvar. Como demonstrado abaixo:
 
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/05%20-%20permitindo%20acesso%20anonimo%20de%20blob.gif" width=""/> ... 
+![alt text](<../../Imagens/05 - permitindo acesso anonimo de blob.gif>)
 
 
-## Passo 5: Criando o Container:      
+### Etapa 3: Configurando o Container:
+No painel do menu esquerdo, selecione Containers 
 
-Navegue até a guia DATA STORAGE > CONTAINERS, para criar o contanier dentro do storage e adicionar as pesquisas que seram analisadas pelo AI SERVICE.
+![alt text](<../../Imagens/06 - criando container.gif>)
 
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/06%20-%20criando%20container.gif" width=""/> ...   
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/07%20adicionando%20pesquisas%20ao%20container.gif" width=""/> ...  
+Adicionar as pesquisas que serão analisadas pelo AI SERVICE.
 
-## Passo 6: Importação e indexação dados para o AI SEARCH:      
-
-Neste ponto você precisa linkar / importar os dados que você inseriu e configurou no seu STORAGE, volte para o AI SEARCH e siga os passos abaixo:
-
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/08%20-%20importando%20os%20dados.gif" width=""/> ... 
-
-Esta é a parte mais importante de todo o processo, assim como o bootcamp fala são muitos passos que que você precisa seguir a risca, achei apenas uma diferença da documentação oficial para o que achei quando configurei o meu.
-
-Ao seguir a [Documentação](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/11-ai-search.html) você chegará em INDEX DOCUMETS, o qual o gif acima mostra o início do processo, siga os topicos até chegar na sessão 4:
-
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/09%20-%20observa%C3%A7%C3%A3o.png" width=""/> ... 
-
-**4. In the Attach Cognitive Services section, select your Azure AI services resource.**
-
-Note que a instrução manda que selecionemos o recurso AI SERVICE configurado, porém para mim não mostrou nenhum, apenas uma informação dizend que meu acesso era gratúitoe que as configurações são limitadas, não se preocupe e pode passar para o passo 5 . In the Add enrichments section.
-
-Siga todas as configurações terminando no passo 17 . Select the indexer name to see more details.
-
-## Passo 7: Cnsultando o índice:      
-
-Feitas todas as configurações vamos voltar ao AZURE AI SERVICES, entrar no nosso serviço e através do SEARCH EXPLORER testar se tudo foi indexado e se a consulta esta funcionando, utilizando os comandos:
-
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/11%20-%20testando%20a%20pesquisa.png" width=""/> ... 
-
-```
-search=*&$count=true    (  verifica se a indexação esta funcionando e mostra os documentos )
-```
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/12%20-%20testando%20a%20pesquisa.png" width=""/> ... 
-
-```
-search=locations:'Chicago' ( Consulta as ocorrencias acontecidas em Chicado )
-```
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/13.png" width=""/> ... 
-
-```
-search=sentiment:'negative' ( Consulta as ocorrencias com sentimento negativo )
-```
-<img align="right" src="https://raw.githubusercontent.com/alexklenio/DIO-Microsoft-Azure-AI-Fundamentals/main/imagens/DP04%20-%20Intelig%C3%AAncia%20de%20documentos%20e%20minera%C3%A7%C3%A3o%20de%20conhecimento/14.png" width=""/> ... 
+![alt text](<../../Imagens/07 adicionando pesquisas ao container.gif>)
 
 
-## Observações finais:      
-
-As ferramentas de inteligÇencia artificial do Azure facilitam a consulta emdocumentos, pesquisas e depoimentos, agilizando ainda mais a consulta de satisfação de empresas sobre seus produtos e serviços.
+Depois que o upload for concluído, você poderá fechar o painel Upload blob . Seus documentos estão agora em seu contêiner de armazenamento
 
 
+### Etapa 4: Indexar os documentos
 
+Depois de armazenar os documentos, você poderá usar o Azure AI Search para extrair insights dos documentos. O portal do Azure fornece um assistente de importação de dados . Com este assistente, você pode criar automaticamente um índice e um indexador para fontes de dados suportadas. Você usará o assistente para criar um índice e importar seus documentos de pesquisa do armazenamento para o índice do Azure AI Search.
+
+
+### Etapa 5: Consultar um Índice
+
+Use o Search Explorer para escrever e testar consultas. O explorador de pesquisa é uma ferramenta incorporada no portal do Azure que oferece uma maneira fácil de validar a qualidade do seu índice de pesquisa. Você pode usar o Search Explorer para escrever consultas e revisar resultados em JSON.
+
+![alt text](<../../Imagens/04 - testando a pesquisa.png>)
+
+### Conclusão Final
+
+O Azure Cognitive Search é uma ferramenta altamente útil para indexação e consulta de dados, especialmente quando combinada com recursos avançados de AI Search. A capacidade de criar índices personalizados, integrar campos vetoriais e explorar diferentes funcionalidades oferecidas pela plataforma torna o processo de busca e recuperação de informações mais eficiente e adaptável às necessidades específicas de cada aplicação.
